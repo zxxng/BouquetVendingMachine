@@ -27,28 +27,51 @@
 						<strong>5,000원</strong>
 					</button>	
 				</li>
-				<li class="item"><button>...</button></li>
-				<li class="item"><button>...</button></li>
-				<li class="item"><button>...</button></li>
-				<li class="item"><button>...</button></li>
-				<li class="item"><button>...</button></li>
+				<li class="item"><button type="button">...</button></li>
+				<li class="item"><button type="button">...</button></li>
+				<li class="item"><button type="button">...</button></li>
+				<li class="item"><button type="button">...</button></li>
+				<li class="item"><button type="button">...</button></li>
 			</ul>
 			
 			<div class="container">
-				<div class="bg-box">
-					<h2 class="title">잔액</h2>
-					<p></p>
-				  </div>
-				  <button class="btn" type="button">거스름돈 반환</button>
+				<div class="line bg-box">
+					<p>잔액 : </p>
+					<p>000원</p>
+				</div>
+				<button type="button">거스름돈 반환</button>
 
+				<label for="input-money" class="a11y-hidden">금액 투입(단위:원)</label>
+				<input class="line" id="input-money" value="10000" min="1000" step="1000" type="number" placeholder="입금액 입력">
+				<button type="button">입금</button>
+
+				<ul class="line get-list bg-box">
+					<li>...</li>
+				</ul>
+				<button type="button">획득</button>
 			</div>
 		</section>
 		<!-- //section1 -->
 
 		<!-- section2 -->
-		<section class="section2">...</section>
+		<section class="section2">
+			<h2 class="a11y-hidden">소지금</h2>
+			<div class="bg-box">
+				<p>소지금 : </p>
+				<p>56,000원</p>
+			</div>
+		</section>
+		<!-- //section2 -->
+
 		<!-- section3 -->
-		<section class="section3">...</section>
+		<section class="section3">
+			<h2>획득한 음료</h2>
+			<ul class="get-list bg-box">
+				<li>...</li>
+			</ul>
+			<p>총금액 : 45,000원</p>
+		</section>
+		<!-- //section3 -->
 	</main>
 </body>
 
