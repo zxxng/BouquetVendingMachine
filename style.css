@@ -174,6 +174,7 @@ section {
 .get-list {
   background-color: var(--base-color);
   height: 106px;
+  border: 1px solid var(--right-gray);
   border-radius: 5px;
   overflow: scroll;
   padding: 7px 7px;
