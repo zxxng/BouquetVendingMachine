@@ -1,6 +1,7 @@
 :root {
   --base-color: #f8ebdf;
   --highlight-color: #b06d5e;
+  --right-gray: #dbdbdb;
 }
 
 /* 접근성 숨김 처리 */
@@ -24,7 +25,8 @@ h3,
 p,
 ul,
 li,
-div {
+div,
+input {
   margin: 0;
   padding: 0;
 }
@@ -54,15 +56,22 @@ h1 {
   margin-bottom: 30px;
 }
 
-main {
-  display: grid;
-  gap: 20px 28px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px auto;
+/* pc */
+@media (min-width: 748px) {
+  main {
+    display: grid;
+    gap: 20px 28px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto;
+  }
+
+  .section1 {
+    grid-row: 1 / span 2;
+  }
 }
 
-.section1 {
-  grid-row: 1 / span 2;
+/* mobile */
+@media (max-width: 747px) {
 }
 
 .item-list {
@@ -103,7 +112,8 @@ button {
 }
 
 h1 > img {
-  width: 380px;
+  max-width: 380px;
+  width: 80%;
 }
 
 section {
@@ -146,8 +156,19 @@ section {
   font-weight: 500;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
+
 .container .btns:last-child {
   background-color: var(--highlight-color);
+}
+
+#input-money {
+  border: 1px solid var(--right-gray);
+  border-radius: 5px;
+  padding: 0 7px;
+}
+
+#input-money::placeholder {
+  color: var(--right-gray);
 }
 
 .get-list {
@@ -187,7 +208,7 @@ section {
 .get-list .get-item strong {
   width: 30px;
   height: 30px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--right-gray);
   border-radius: 5px;
   font-size: 1.4rem;
   text-align: center;
