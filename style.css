@@ -43,11 +43,11 @@ img {
 
 button {
   all: unset;
+  cursor: pointer;
 }
 
 /* Layout */
 .wrap {
-  width: 748px;
   margin: auto;
 }
 
@@ -58,7 +58,11 @@ h1 {
 
 /* pc */
 @media (min-width: 748px) {
+  body {
+    background-color: var(--base-color);
+  }
   main {
+    width: 748px;
     display: grid;
     gap: 20px 28px;
     grid-template-columns: 1fr 1fr;
@@ -72,6 +76,17 @@ h1 {
 
 /* mobile */
 @media (max-width: 747px) {
+  main {
+    width: 360px;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  h1 > img {
+    width: 240px;
+  }
 }
 
 .item-list {
@@ -103,17 +118,12 @@ html {
   font-size: 10px;
 }
 
-body {
-  background-color: var(--base-color);
-}
-
 button {
   font-family: "Pretendard-Regular";
 }
 
 h1 > img {
   max-width: 380px;
-  width: 80%;
 }
 
 section {
