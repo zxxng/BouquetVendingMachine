@@ -2,14 +2,14 @@
 <html lang="ko-KR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>꽃다발 자판기</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>꽃다발 자판기</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 						<img src="./images/red_bouquet.png" alt="red bouquet">
 						<p>Red_bouquet</p>
 						<strong>5,000원</strong>
-					</button>	
+					</button>
 				</li>
 				<li class="item"><button type="button">...</button></li>
 				<li class="item"><button type="button">...</button></li>
@@ -33,22 +33,50 @@
 				<li class="item"><button type="button">...</button></li>
 				<li class="item"><button type="button">...</button></li>
 			</ul>
-			
+
 			<div class="container">
 				<div class="line bg-box">
 					<p>잔액 : </p>
 					<p>000원</p>
 				</div>
-				<button type="button">거스름돈 반환</button>
+				<button class="btns" type="button">거스름돈 반환</button>
 
 				<label for="input-money" class="a11y-hidden">금액 투입(단위:원)</label>
 				<input class="line" id="input-money" value="10000" min="1000" step="1000" type="number" placeholder="입금액 입력">
-				<button type="button">입금</button>
+				<button class="btns" type="button">입금</button>
 
-				<ul class="line get-list bg-box">
-					<li>...</li>
+				<ul class="line get-list">
+					<li class="get-item">
+						<div>
+							<img src="./images/red_bouquet.png" alt="red bouquet">
+							<p>Red_bouquet</p>
+						</div>
+						<strong>1</strong>
+					</li>
+					<li class="get-item">
+						<div>
+							<img src="./images/red_bouquet.png" alt="red bouquet">
+							<p>Red_bouquet</p>
+						</div>
+						<strong>1</strong>
+					</li>
+					<li class="get-item">
+						<div>
+							<img src="./images/red_bouquet.png" alt="red bouquet">
+							<p>Red_bouquet</p>
+						</div>
+						<strong>1</strong>
+					</li>
+					<li class="get-item">
+						<div>
+							<img src="./images/red_bouquet.png" alt="red bouquet">
+							<p>Red_bouquet</p>
+						</div>
+						<strong>1</strong>
+					</li>
+
 				</ul>
-				<button type="button">획득</button>
+				<button class="btns" type="button">획득</button>
 			</div>
 		</section>
 		<!-- //section1 -->
@@ -66,8 +94,35 @@
 		<!-- section3 -->
 		<section class="section3">
 			<h2>획득한 음료</h2>
-			<ul class="get-list bg-box">
-				<li>...</li>
+			<ul class="get-list">
+				<li class="get-item">
+					<div>
+						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<p>Red_bouquet</p>
+					</div>
+					<strong>1</strong>
+				</li>
+				<li class="get-item">
+					<div>
+						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<p>Red_bouquet</p>
+					</div>
+					<strong>1</strong>
+				</li>
+				<li class="get-item">
+					<div>
+						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<p>Red_bouquet</p>
+					</div>
+					<strong>1</strong>
+				</li>
+				<li class="get-item">
+					<div>
+						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<p>Red_bouquet</p>
+					</div>
+					<strong>1</strong>
+				</li>
 			</ul>
 			<p>총금액 : 45,000원</p>
 		</section>
