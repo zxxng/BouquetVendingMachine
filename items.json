@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Red bouquet",
+    "cost": 5000,
+    "img": "red-bouquet.png",
+    "count": 5
+  },
+  {
+    "name": "Violet bouquet",
+    "cost": 5000,
+    "img": "violet-bouquet.png",
+    "count": 5
+  },
+  {
+    "name": "Yellow bouquet",
+    "cost": 5000,
+    "img": "yellow-bouquet.png",
+    "count": 5
+  },
+  {
+    "name": "Blue bouquet",
+    "cost": 5000,
+    "img": "blue-bouquet.png",
+    "count": 5
+  },
+  {
+    "name": "Cream bouquet",
+    "cost": 5000,
+    "img": "cream-bouquet.png",
+    "count": 5
+  },
+  {
+    "name": "Orange bouquet",
+    "cost": 5000,
+    "img": "orange-bouquet.png",
+    "count": 5
+  }
+]
