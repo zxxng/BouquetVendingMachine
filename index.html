@@ -15,14 +15,13 @@
 <body>
 	<h1><img src="./images/logo.png" alt="bouquet"></h1>
 	<main class="wrap">
-
 		<!-- section1 -->
 		<section class="section1">
 			<h2 class="a11y-hidden">꽃다발 판매</h2>
 			<ul class="item-list">
-				<li class="item">
+				<!-- <li class="item">
 					<button>
-						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<img src="./images/red-bouquet.png" alt="red bouquet">
 						<p>Red_bouquet</p>
 						<strong>5,000원</strong>
 					</button>
@@ -31,7 +30,7 @@
 				<li class="item"><button type="button">...</button></li>
 				<li class="item"><button type="button">...</button></li>
 				<li class="item"><button type="button">...</button></li>
-				<li class="item"><button type="button">...</button></li>
+				<li class="item"><button type="button">...</button></li> -->
 			</ul>
 
 			<div class="container">
@@ -48,7 +47,7 @@
 				<ul class="line get-list">
 					<li class="get-item">
 						<div>
-							<img src="./images/red_bouquet.png" alt="red bouquet">
+							<img src="./images/red-bouquet.png" alt="red bouquet">
 							<p>Red_bouquet</p>
 						</div>
 						<strong>1</strong>
@@ -78,7 +77,7 @@
 			<ul class="get-list">
 				<li class="get-item">
 					<div>
-						<img src="./images/red_bouquet.png" alt="red bouquet">
+						<img src="./images/red-bouquet.png" alt="red bouquet">
 						<p>Red_bouquet</p>
 					</div>
 					<strong>1</strong>
@@ -91,6 +90,12 @@
 		</section>
 		<!-- //section3 -->
 	</main>
+
+	<script type="module">
+		import BouquetGenerator from './js/bouquetGenerator.js';
+		const generator = new BouquetGenerator();
+		generator.setup();
+	</script>
 </body>
 
 </html>
