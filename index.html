@@ -19,24 +19,13 @@
 		<section class="section1">
 			<h2 class="a11y-hidden">꽃다발 판매</h2>
 			<ul class="item-list">
-				<!-- <li class="item">
-					<button>
-						<img src="./images/red-bouquet.png" alt="red bouquet">
-						<p>Red_bouquet</p>
-						<strong>5,000원</strong>
-					</button>
-				</li>
-				<li class="item"><button type="button">...</button></li>
-				<li class="item"><button type="button">...</button></li>
-				<li class="item"><button type="button">...</button></li>
-				<li class="item"><button type="button">...</button></li>
-				<li class="item"><button type="button">...</button></li> -->
+				<!-- BouquetGenerator 생성 -->
 			</ul>
 
 			<div class="container">
 				<div class="line bg-box">
 					<p>잔액 : </p>
-					<p>000원</p>
+					<p id="balance">3,000원</p>
 				</div>
 				<button class="btns" type="button">거스름돈 반환</button>
 
@@ -66,7 +55,7 @@
 			<h2 class="a11y-hidden">소지금</h2>
 			<div class="bg-box">
 				<p>소지금 : </p>
-				<p>56,000원</p>
+				<p id="myMoney">56,000원</p>
 			</div>
 		</section>
 		<!-- //section2 -->
@@ -93,8 +82,15 @@
 
 	<script type="module">
 		import BouquetGenerator from './js/bouquetGenerator.js';
+		import BouquetMachineEvents from './js/bouquetMachineEvents.js';
+
 		const generator = new BouquetGenerator();
-		generator.setup();
+		const machineEvents = new BouquetMachineEvents();
+
+		(async function () {
+			await generator.setup();
+			machineEvents.bindEvent();
+		})()
 	</script>
 </body>
 
