@@ -3,6 +3,7 @@ class BouquetMachineEvents {
     // section1
     const vMachine = document.querySelector(".section1");
     this.balance = vMachine.querySelector("#balance");
+    this.btnBalance = vMachine.querySelector(".bg-box+.btns");
     this.inputCostEl = vMachine.querySelector("#input-money");
     this.btnDeposit = vMachine.querySelector("#input-money+.btns");
     // section2
@@ -39,6 +40,19 @@ class BouquetMachineEvents {
         // 입금액 초기화
         this.inputCostEl.value = "";
       }
+    });
+
+    /**
+     * [거스름돈 반환 버튼]
+     * 1. 소지금 === 소지금 + 잔액
+     * 2. 잔액 === 0
+     */
+    this.btnBalance.addEventListener("click", () => {
+      const balanceVal = parseInt(this.balance.textContent.replaceAll(",", ""));
+      const myMoneyVal = parseInt(this.myMoney.textContent.replaceAll(",", ""));
+
+      this.myMoney.textContent = new Intl.NumberFormat().format(myMoneyVal + balanceVal) + "원";
+      this.balance.textContent = 0 + "원";
     });
   }
 }
