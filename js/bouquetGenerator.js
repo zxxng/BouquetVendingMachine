@@ -28,7 +28,7 @@ class BouquetGenerator {
       const item = document.createElement("li");
       item.className = "item";
       const itemTemplate = `
-			<button type="button" data-item="${el.name}" data-count="${el.count}" data-price="${el.cost}" data-img="${el.img}">
+			<button type="button" data-name="${el.name}" data-count="${el.count}" data-cost="${el.cost}" data-img="${el.img}">
 				<img src="./images/${el.img}" alt="${el.name}" >
 				<p>${el.name}</p>
 				<strong>${el.cost}원</strong>
