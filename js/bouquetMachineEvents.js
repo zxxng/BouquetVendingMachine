@@ -7,12 +7,14 @@ class BouquetMachineEvents {
     this.inputCostEl = vMachine.querySelector("#input-money");
     this.btnDeposit = vMachine.querySelector("#input-money+.btns");
     this.saveList = vMachine.querySelector(".get-list");
+    this.btnGet = vMachine.querySelector(".get-list+.btns");
     // section2
     const myInfo = document.querySelector(".section2");
     this.myMoney = myInfo.querySelector("#myMoney");
     // section3
     const getInfo = document.querySelector(".section3");
     this.getList = getInfo.querySelector(".get-list");
+    this.total = getInfo.querySelector(".total");
   }
 
   // 장바구니 생성 함수
@@ -119,6 +121,41 @@ class BouquetMachineEvents {
           }
         }
       });
+    });
+
+    /**
+     * [획득 버튼]
+     * 1. 획득한 상품 리스트 추가
+     * 2. 장바구니 초기화
+     * 3. 총 금액 업데이트
+     */
+    this.btnGet.addEventListener("click", () => {
+      const saveItemList = this.saveList.querySelectorAll("li");
+      const getItemList = this.getList.querySelectorAll("li");
+
+      for (const saveItem of saveItemList) {
+        let isGet = false;
+        for (const getItem of getItemList) {
+          if (saveItem.dataset.name === getItem.dataset.item) {
+            // 획득한 상품 카운트 증가
+            getItem.querySelector("strong").textContent = parseInt(getItem.querySelector("strong").textContent) + parseInt(saveItem.querySelector("strong").textContent);
+
+            isGet = true;
+            break;
+          }
+        }
+        if (!isGet) {
+          this.getList.append(saveItem);
+        }
+      }
+      // 장바구니 초기화
+      this.saveList.innerHTML = null;
+      // 총금액 계산
+      let totalPrice = 0;
+      this.getList.querySelectorAll("li").forEach((getItem) => {
+        totalPrice += parseInt(getItem.dataset.cost) * parseInt(getItem.querySelector("strong").textContent);
+      });
+      this.total.textContent = `총금액 : ${new Intl.NumberFormat().format(totalPrice)} 원`;
     });
   }
 }
