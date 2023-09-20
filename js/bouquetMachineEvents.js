@@ -91,7 +91,6 @@ class BouquetMachineEvents {
       item.addEventListener("click", (event) => {
         const balanceVal = parseInt(this.balance.textContent.replaceAll(",", ""));
         const targetEl = event.target.closest("button");
-        console.log(targetEl);
         const targetElPrice = parseInt(targetEl.dataset.price);
         const saveListItem = this.saveList.querySelectorAll("li");
         let isSave = false;
@@ -135,7 +134,7 @@ class BouquetMachineEvents {
       for (const saveItem of saveItemList) {
         let isGet = false;
         for (const getItem of getItemList) {
-          if (saveItem.dataset.name === getItem.dataset.item) {
+          if (saveItem.dataset.name === getItem.dataset.name) {
             // 획득한 상품 카운트 증가
             getItem.querySelector("strong").textContent = parseInt(getItem.querySelector("strong").textContent) + parseInt(saveItem.querySelector("strong").textContent);
 
