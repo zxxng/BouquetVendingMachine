@@ -4,7 +4,7 @@ class BouquetMachineEvents {
     const vMachine = document.querySelector(".section1");
     this.balance = vMachine.querySelector("#balance");
     this.btnBalance = vMachine.querySelector(".bg-box+.btns");
-    this.inputCostEl = vMachine.querySelector("#input-money");
+    this.inputPriceEl = vMachine.querySelector("#input-money");
     this.btnDeposit = vMachine.querySelector("#input-money+.btns");
     this.saveList = vMachine.querySelector(".get-list");
     this.btnGet = vMachine.querySelector(".get-list+.btns");
@@ -22,7 +22,7 @@ class BouquetMachineEvents {
     const saveItem = document.createElement("li");
     saveItem.className = "get-item";
     saveItem.dataset.name = target.dataset.name;
-    saveItem.dataset.cost = target.dataset.cost;
+    saveItem.dataset.price = target.dataset.price;
     saveItem.innerHTML = `
 		<div>
 			<img src="./images/${target.dataset.img}" alt="${target.dataset.name}">
@@ -44,7 +44,7 @@ class BouquetMachineEvents {
      * 4. 정상 작동 시 입금창 초기화
      */
     this.btnDeposit.addEventListener("click", () => {
-      const inputMoney = parseInt(this.inputCostEl.value);
+      const inputMoney = parseInt(this.inputPriceEl.value);
       const myMoneyVal = parseInt(this.myMoney.textContent.replaceAll(",", ""));
       const balanceVal = parseInt(this.balance.textContent.replaceAll(",", ""));
 
@@ -58,7 +58,7 @@ class BouquetMachineEvents {
           this.myMoney.textContent = new Intl.NumberFormat().format(myMoneyVal - inputMoney) + "원";
         }
         // 입금액 초기화
-        this.inputCostEl.value = "";
+        this.inputPriceEl.value = "";
       }
     });
 
@@ -89,18 +89,17 @@ class BouquetMachineEvents {
     this.btnItems = document.querySelectorAll(".section1 .item");
     this.btnItems.forEach((item) => {
       item.addEventListener("click", (event) => {
-        console.log("event 발생!");
         const balanceVal = parseInt(this.balance.textContent.replaceAll(",", ""));
         const targetEl = event.target.closest("button");
         console.log(targetEl);
-        const targetElCost = parseInt(targetEl.dataset.cost);
+        const targetElPrice = parseInt(targetEl.dataset.price);
         const saveListItem = this.saveList.querySelectorAll("li");
         let isSave = false;
 
-        if (balanceVal < targetElCost) {
+        if (balanceVal < targetElPrice) {
           alert("잔액이 부족합니다.");
         } else {
-          this.balance.textContent = new Intl.NumberFormat().format(balanceVal - targetElCost) + "원";
+          this.balance.textContent = new Intl.NumberFormat().format(balanceVal - targetElPrice) + "원";
 
           for (const i of saveListItem) {
             if (targetEl.dataset.name === i.dataset.name) {
@@ -153,7 +152,7 @@ class BouquetMachineEvents {
       // 총금액 계산
       let totalPrice = 0;
       this.getList.querySelectorAll("li").forEach((getItem) => {
-        totalPrice += parseInt(getItem.dataset.cost) * parseInt(getItem.querySelector("strong").textContent);
+        totalPrice += parseInt(getItem.dataset.price) * parseInt(getItem.querySelector("strong").textContent);
       });
       this.total.textContent = `총금액 : ${new Intl.NumberFormat().format(totalPrice)} 원`;
     });
