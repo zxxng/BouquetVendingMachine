@@ -114,7 +114,14 @@ class BouquetMachineEvents {
           targetEl.dataset.count--;
           if (!parseInt(targetEl.dataset.count)) {
             // 품절표시
-            console.log("품절");
+            targetEl.insertAdjacentHTML(
+              "beforeEnd",
+              `
+								<strong class="soldout">
+									<span>품절</span>
+								</strong>
+							`
+            );
             targetEl.disabled = "disabled";
           }
         }
