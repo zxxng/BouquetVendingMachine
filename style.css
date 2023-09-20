@@ -146,11 +146,11 @@ section {
 }
 
 .item img {
-  width: 100%;
+  width: 65px;
 }
 
 .item p {
-  margin: 5px 0;
+  margin: 5px 0 8px 0;
 }
 
 .item strong {
