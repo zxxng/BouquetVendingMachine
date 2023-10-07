@@ -98,6 +98,7 @@ class BouquetMachineEvents {
         if (balanceVal < targetElPrice) {
           alert("잔액이 부족합니다.");
         } else {
+          event.target.closest("li").className = "item active";
           this.balance.textContent = new Intl.NumberFormat().format(balanceVal - targetElPrice) + "원";
 
           for (const i of saveListItem) {
