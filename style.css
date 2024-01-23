@@ -114,12 +114,12 @@ h1 {
 /* style */
 
 html {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   font-size: 10px;
 }
 
 button {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
 }
 
 h1 > img {
@@ -137,16 +137,21 @@ section {
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   position: relative;
+  transition: all 0.3s;
+}
+
+.item:hover {
+  outline: 3px solid var(--highlight-color);
+  background-color: #fffaf6;
 }
 
 .active {
-  /* box-shadow: inset 0 0 3px 3px var(--highlight-color); */
   outline: 3px solid var(--highlight-color);
   box-sizing: border-box;
 }
 
 .item button {
-  padding: 13px 12px;
+  padding: 13px 10px;
   margin: auto;
   box-sizing: border-box;
 }
