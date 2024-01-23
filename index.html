@@ -62,18 +62,7 @@
 		<!-- //section3 -->
 	</main>
 
-	<script type="module">
-		import BouquetGenerator from './js/bouquetGenerator.js';
-		import BouquetMachineEvents from './js/bouquetMachineEvents.js';
-
-		const generator = new BouquetGenerator();
-		const machineEvents = new BouquetMachineEvents();
-
-		(async function () {
-			await generator.setup();
-			machineEvents.bindEvent();
-		})()
-	</script>
+	<script type="module" src="/js/app.js"></script>
 </body>
 
 </html>
