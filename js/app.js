@@ -1,5 +1,5 @@
-import BouquetGenerator from './BouquetGenerator.js';
-import BouquetMachineEvents from './BouquetMachineEvents.js';
+import BouquetGenerator from './classes/BouquetGenerator.js';
+import BouquetMachineEvents from './classes/BouquetMachineEvents.js';
 
 const generator = new BouquetGenerator();
 const machineEvents = new BouquetMachineEvents();
