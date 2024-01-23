@@ -40,7 +40,7 @@ Vanilla JavaScript로 구현한 자판기에서 꽃다발을 뽑는 웹 어플�
 ## ✍️ 학습 내용
 
 - **Class 문법 활용**으로 **객체지향 개념 학습**
-- createDocumentFragment()를 이용한 **가상돔 활용**으로 SPA 구현
+- createDocumentFragment()를 활용한 가상 메모리에서의 DOM 조작으로 **웹 페이지 성능 및 효율성 향상**
 - JavaScript modules 활용으로 **코드 유지/관리 및 재사용성 강화**
 - 웹 접근성을 고려한 **시멘틱 태그** 사용
 - PC 및 모바일 사용자 대상 **반응형** 적용
