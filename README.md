@@ -50,14 +50,16 @@ Vanilla JavaScript로 구현한 자판기에서 꽃다발을 뽑는 웹 어플�
 ```shell
 .
 ├── README.md
-├── images
-│   └── # png files
+├── assets
+│   ├── images
+│   │   └── # png files
+│   └── items.json
 ├── index.html
-├── items.json
 ├── js
-│   ├── BouquetGenerator.js
-│   ├── BouquetMachineEvents.js
-│   └── app.js
+│   ├── app.js
+│   └── classes
+│       ├── BouquetGenerator.js
+│       └── BouquetMachineEvents.js
 └── style.css
 ```
 
