@@ -1,6 +1,6 @@
 # 꽃다발 자판기 (Bouquet Vending Machine)
 
-<img src="images/bouquet-vending-machine.png" width="100%"> </br>
+<img src="./assets/images/bouquet-vending-machine.png" width="100%"> </br>
 
 ## 프로젝트 소개 및 개요
 
